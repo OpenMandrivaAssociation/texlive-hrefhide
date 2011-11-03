@@ -1,3 +1,9 @@
+# revision 22255
+# category Package
+# catalog-ctan /macros/latex/contrib/hrefhide
+# catalog-date 2011-04-29 14:22:52 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0f
 Name:		texlive-hrefhide
 Version:	1.0f
 Release:	1
@@ -51,6 +57,7 @@ text.).
 %doc %{_texmfdistdir}/source/latex/hrefhide/hrefhide.drv
 %doc %{_texmfdistdir}/source/latex/hrefhide/hrefhide.dtx
 %doc %{_texmfdistdir}/source/latex/hrefhide/hrefhide.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ text.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
