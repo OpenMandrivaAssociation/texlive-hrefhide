@@ -6,7 +6,7 @@
 # catalog-version 1.0f
 Name:		texlive-hrefhide
 Version:	1.0f
-Release:	4
+Release:	5
 Summary:	Suppress hyper links when printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hrefhide
