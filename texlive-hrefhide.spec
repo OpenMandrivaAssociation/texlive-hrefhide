@@ -1,19 +1,13 @@
-# revision 22255
-# category Package
-# catalog-ctan /macros/latex/contrib/hrefhide
-# catalog-date 2011-04-29 14:22:52 +0200
-# catalog-license lppl1.3
-# catalog-version 1.0f
 Name:		texlive-hrefhide
-Version:	1.0f
-Release:	12
+Version:	22255
+Release:	1
 Summary:	Suppress hyper links when printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hrefhide
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ background, thus preserving the layout of the rest of the
 text.).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,11 @@ text.).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0f-2
-+ Revision: 752585
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0f-1
-+ Revision: 718623
-- texlive-hrefhide
-- texlive-hrefhide
-- texlive-hrefhide
-- texlive-hrefhide
-
