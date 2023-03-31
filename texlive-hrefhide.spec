@@ -1,6 +1,6 @@
 Name:		texlive-hrefhide
 Version:	22255
-Release:	1
+Release:	2
 Summary:	Suppress hyper links when printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hrefhide
