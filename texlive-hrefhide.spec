@@ -3,7 +3,7 @@ Version:	66189
 Release:	1
 Summary:	Suppress hyper links when printing
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hrefhide
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/hrefhide
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hrefhide.doc.r%{version}.tar.xz
